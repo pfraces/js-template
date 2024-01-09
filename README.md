@@ -74,6 +74,24 @@ unit tests.
 `npm test` is configured to execute all `.spec.js` or `.test.js` files inside
 the `src/` directory.
 
+## ES module imports
+
+VSCode is configured to include file extensions from import path suggestions
+(via `.vscode/settings.json`) which are required for ES modules.
+
+### Absolute paths
+
+The project is configured to support absolute paths from both Node.js (via
+`imports` in `package.json`) and VSCode (via `jsconfig.json`).
+
+To use absolute paths, prefix your import files with `#src/`. VSCode will give
+you the right file suggestions.
+
+_Learn more:_
+
+- _[Node.js Subpath imports](https://nodejs.org/api/packages.html#subpath-imports)_
+- _[VSCode jsconfig.json Reference](https://code.visualstudio.com/docs/languages/jsconfig)_
+
 ## Package entry points
 
 The project is configured to export `src/index.js` as main entry point.

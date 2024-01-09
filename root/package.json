@@ -4,6 +4,9 @@
   "description": "Project description",
   "license": "MIT",
   "type": "module",
+  "imports": {
+    "#src/*": "./src/*"
+  },
   "exports": {
     ".": "./src/index.js"
   },
