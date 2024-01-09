@@ -13,21 +13,28 @@ Create a new `nodejs-template`-based project using
 [degit](https://github.com/Rich-Harris/degit).
 
 ```sh
-npx degit pfraces/nodejs-template/root my-project
+npx degit pfraces/nodejs-template/root project-name
 ```
+
+_Replace `project-name` with the name of your project._
 
 ### Post-install
 
 1. Change project name and description in `README.md` and `package.json`
-2. Install dependencies
+2. `git init` repository
+3. `npm install` dependencies
 
 ## What's included
 
-### Core settings
+### Editor settings
 
-- [Git](https://git-scm.com/)
 - [EditorConfig](https://editorconfig.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+
+### Version control
+
+- [Git](https://git-scm.com/)
+- [husky](https://typicode.github.io/husky/)
 
 ### Linters and formatters
 
@@ -37,17 +44,47 @@ npx degit pfraces/nodejs-template/root my-project
 - [markdownlint](https://github.com/DavidAnson/markdownlint-cli2)
 - [Prettier](https://prettier.io/)
 
-## Decission making
+### Unit testing
 
-### Module `exports` (`package.json`)
+- [Mocha](https://mochajs.org/)
+- [Chai](https://www.chaijs.com/)
 
-<https://nodejs.org/api/packages.html#package-entry-points>
+## Project structure
 
-> The `exports` provides a modern alternative to `main` allowing multiple entry
-> points to be defined, conditional entry resolution support between
-> environments, and preventing any other entry points besides those defined in
-> `exports`. This encapsulation allows module authors to clearly define the
-> public interface for their package.
->
-> For new packages targeting the currently supported versions of Node.js, the
-> `exports` field is recommended.
+```text
+./
+  src/
+    index.js
+    index.test.js
+```
+
+### `./`
+
+The root of the project. It contains all the config files and directories.
+
+### `src/`
+
+Where the development happens. It contains the source files and its companion
+unit tests.
+
+`npm test` is configured to execute all `.spec.js` or `.test.js` files inside
+the `src/` directory.
+
+## Package entry points
+
+The project is configured to export `src/index.js` as main entry point.
+
+_Learn more:
+[Package entry points](https://nodejs.org/api/packages.html#package-entry-points)._
+
+## Npm scripts
+
+```json
+{
+  "test": "mocha src/**/*.{test,spec}.js",
+  "format": "prettier --write --cache .",
+  "lint:js": "eslint .",
+  "lint:md": "markdownlint-cli2 **/*.md !node_modules",
+  "prepare": "husky install"
+}
+```

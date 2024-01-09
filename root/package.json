@@ -8,16 +8,20 @@
     ".": "./src/index.js"
   },
   "scripts": {
-    "start": "node examples/index.js",
-    "format": "prettier --write .",
+    "test": "mocha src/**/*.{test,spec}.js",
+    "format": "prettier --write --cache .",
     "lint:js": "eslint .",
-    "lint:md": "markdownlint-cli2 **/*.md !node_modules"
+    "lint:md": "markdownlint-cli2 **/*.md !node_modules",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@eslint/js": "^8.56.0",
+    "chai": "^5.0.0",
     "eslint": "^8.56.0",
     "globals": "^13.24.0",
+    "husky": "^8.0.0",
     "markdownlint-cli2": "^0.11.0",
+    "mocha": "^10.2.0",
     "prettier": "^3.1.1"
   }
 }
