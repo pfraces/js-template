@@ -45,8 +45,6 @@ hooks._
 ### Linters and formatters
 
 - [ESLint](https://eslint.org/)
-- [Stylelint](https://stylelint.io/)
-- [HTMLHint](https://htmlhint.com/)
 - [markdownlint](https://github.com/DavidAnson/markdownlint-cli2)
 - [Prettier](https://prettier.io/)
 
