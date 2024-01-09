@@ -1,10 +1,12 @@
 # Node.js Template
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Template for [Node.js](https://nodejs.org/) projects.
 
 _This template is best suited for library authors. For backend development check
 out the [Express Template](https://github.com/pfraces/express-template). For
-frontend development checkout the
+frontend development check out the
 [Vite Template](https://github.com/pfraces/vite-template)._
 
 ## Usage
@@ -24,6 +26,9 @@ _Replace `project-name` with the name of your project._
 2. `git init` repository
 3. `npm install` dependencies
 
+_It's important to `git init` before `npm install` so husky can install the git
+hooks._
+
 ## What's included
 
 ### Editor settings
@@ -35,6 +40,7 @@ _Replace `project-name` with the name of your project._
 
 - [Git](https://git-scm.com/)
 - [husky](https://typicode.github.io/husky/)
+- [lint-staged](https://github.com/lint-staged/lint-staged)
 
 ### Linters and formatters
 
@@ -77,14 +83,13 @@ The project is configured to export `src/index.js` as main entry point.
 _Learn more:
 [Package entry points](https://nodejs.org/api/packages.html#package-entry-points)._
 
-## Npm scripts
+## NPM scripts
 
 ```json
 {
   "test": "mocha src/**/*.{test,spec}.js",
   "format": "prettier --write --cache .",
   "lint:js": "eslint .",
-  "lint:md": "markdownlint-cli2 **/*.md !node_modules",
-  "prepare": "husky install"
+  "lint:md": "markdownlint-cli2 **/*.md !node_modules"
 }
 ```
