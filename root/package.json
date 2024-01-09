@@ -1,0 +1,23 @@
+{
+  "name": "project-name",
+  "version": "0.1.0",
+  "description": "Project description",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node examples/index.js",
+    "format": "prettier --write .",
+    "lint:js": "eslint .",
+    "lint:md": "markdownlint-cli2 **/*.md !node_modules"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.56.0",
+    "eslint": "^8.56.0",
+    "globals": "^13.24.0",
+    "markdownlint-cli2": "^0.11.0",
+    "prettier": "^3.1.1"
+  }
+}

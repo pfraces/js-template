@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-template",
+  "version": "0.1.0",
+  "description": "Template for Node.js projects",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write . !root !package.json !package-lock.json",
+    "lint:md": "markdownlint-cli2 **/*.md !node_modules !root"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.11.0",
+    "prettier": "^3.1.1"
+  }
+}
