@@ -21,8 +21,9 @@ _Replace `project-name` with the name of your project._
 ### Post-install
 
 1. Change project name and description in `README.md` and `package.json`
-2. `git init` repository
-3. `npm install` dependencies
+2. Change project name in `package-lock.json`
+3. `git init` repository
+4. `npm install` dependencies
 
 _It's important to `git init` before `npm install` so husky can install the git
 hooks._
