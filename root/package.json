@@ -1,8 +1,9 @@
 {
   "name": "project-name",
-  "version": "0.1.0",
   "description": "Project description",
+  "version": "0.1.0",
   "type": "module",
+  "private": true,
   "imports": {
     "#src/*": "./src/*"
   },

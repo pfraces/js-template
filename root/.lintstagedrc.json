@@ -1,5 +1,5 @@
 {
-  "*.{md,json,js}": "prettier --list-different",
-  "*.md": "markdownlint-cli2",
-  "*.js": "eslint"
+  "*.{js,json,md}": "prettier --list-different",
+  "*.js": "eslint",
+  "*.md": "markdownlint-cli2"
 }

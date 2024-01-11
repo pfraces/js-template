@@ -1,9 +1,10 @@
 {
   "name": "nodejs-template",
-  "version": "0.1.0",
   "description": "Template for Node.js projects",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
+  "private": true,
   "scripts": {
     "format": "prettier --write . !root !package.json !package-lock.json",
     "lint:md": "markdownlint-cli2 **/*.md !node_modules !root"

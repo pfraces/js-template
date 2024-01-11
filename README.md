@@ -1,11 +1,10 @@
 # Node.js Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: Prettier](https://img.shields.io/badge/Code_style-Prettier-ff69b4.svg)](https://prettier.io/)
 
-Template for [Node.js](https://nodejs.org/) projects.
-
-_This template is best suited for library authors. For frontend development
-check out the [Vite Template](https://github.com/pfraces/vite-template)._
+Template for [Node.js](https://nodejs.org/) projects, tailored for library
+authors.
 
 ## Usage
 
@@ -74,6 +73,17 @@ unit tests.
 `npm test` is configured to execute all `.spec.js` or `.test.js` files inside
 the `src/` directory.
 
+## npm scripts
+
+```json
+{
+  "test": "mocha src/**/*.{test,spec}.js",
+  "format": "prettier --write --cache .",
+  "lint:js": "eslint .",
+  "lint:md": "markdownlint-cli2 **/*.md !node_modules"
+}
+```
+
 ## ES module imports
 
 VSCode is configured to include file extensions from import path suggestions
@@ -103,24 +113,18 @@ _Learn more:
 
 - [editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)
 - [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [davidanson.vscode-markdownlint](https://marketplace.visualstudio.com/items?itemName=davidanson.vscode-markdownlint)
 - [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [davidanson.vscode-markdownlint](https://marketplace.visualstudio.com/items?itemName=davidanson.vscode-markdownlint)
 
 VSCode is configured to recommend the previous extensions from the extensions
 view (via `.vscode/extensions.json`).
 
-## npm scripts
+## Publishing to npm
 
-```json
-{
-  "test": "mocha src/**/*.{test,spec}.js",
-  "format": "prettier --write --cache .",
-  "lint:js": "eslint .",
-  "lint:md": "markdownlint-cli2 **/*.md !node_modules"
-}
-```
+npm is configured to prevent accidental publication. To enable package
+publication remove `{ "private": true }` from `package.json`.
 
-## Licensing
+### Licensing
 
 > You should specify a license for your package so that people know how they are
 > permitted to use it, and any restrictions you're placing on it.
@@ -130,9 +134,6 @@ Set the license in your `package.json`:
 ```json
 { "license": "<SPDX license identifier>" }
 ```
-
-_If you are not planning to publish to npm consider setting
-`{ "private": true }` to prevent accidental publication._
 
 _Learn more:_
 
