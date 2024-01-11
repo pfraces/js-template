@@ -29,17 +29,6 @@ git hooks._
 - Change project name and description in `README.md` and `package.json`
 - Change project name in `package-lock.json`
 
-### Licensing
-
-> You should specify a license for your package so that people know how they are
-> permitted to use it, and any restrictions you're placing on it.
-
-_If you are not planning to publish to npm consider setting `"private": true` in
-your `package.json` to prevent accidental publication._
-
-_Learn more:
-[Configuring npm - license](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license)_
-
 ## What's included
 
 ### Editor settings
@@ -55,9 +44,9 @@ _Learn more:
 
 ### Linters and formatters
 
+- [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
 - [markdownlint](https://github.com/DavidAnson/markdownlint-cli2)
-- [Prettier](https://prettier.io/)
 
 ### Unit testing
 
@@ -130,3 +119,22 @@ view (via `.vscode/extensions.json`).
   "lint:md": "markdownlint-cli2 **/*.md !node_modules"
 }
 ```
+
+## Licensing
+
+> You should specify a license for your package so that people know how they are
+> permitted to use it, and any restrictions you're placing on it.
+
+Set the license in your `package.json`:
+
+```json
+{ "license": "<SPDX license identifier>" }
+```
+
+_If you are not planning to publish to npm consider setting
+`{ "private": true }` to prevent accidental publication._
+
+_Learn more:_
+
+- _[Configuring npm - license](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license)_
+- _[Choose an open source license](https://choosealicense.com/)_
