@@ -13,8 +13,8 @@
   "scripts": {
     "test": "mocha src/**/*.{test,spec}.js",
     "format": "prettier --write --cache .",
-    "lint:js": "eslint .",
     "lint:md": "markdownlint-cli2 **/*.md !node_modules",
+    "lint:js": "eslint .",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },

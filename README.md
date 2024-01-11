@@ -4,10 +4,8 @@
 
 Template for [Node.js](https://nodejs.org/) projects.
 
-_This template is best suited for library authors. For backend development check
-out the [Express Template](https://github.com/pfraces/express-template). For
-frontend development check out the
-[Vite Template](https://github.com/pfraces/vite-template)._
+_This template is best suited for library authors. For frontend development
+check out the [Vite Template](https://github.com/pfraces/vite-template)._
 
 ## Usage
 
@@ -98,6 +96,16 @@ The project is configured to export `src/index.js` as main entry point.
 
 _Learn more:
 [Package entry points](https://nodejs.org/api/packages.html#package-entry-points)._
+
+## VSCode recommended extensions
+
+- [editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)
+- [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [davidanson.vscode-markdownlint](https://marketplace.visualstudio.com/items?itemName=davidanson.vscode-markdownlint)
+- [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+VSCode is configured to recommend the previous extensions from the extensions
+view (via `.vscode/extensions.json`).
 
 ## NPM scripts
 
