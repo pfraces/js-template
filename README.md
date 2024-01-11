@@ -14,19 +14,31 @@ Create a new `nodejs-template`-based project using
 
 ```sh
 npx degit pfraces/nodejs-template/root project-name
+cd project-name
+git init
+npm install
 ```
 
 _Replace `project-name` with the name of your project._
 
+_**Keep in mind:** Run `git init` before `npm install` so husky can install its
+git hooks._
+
 ### Post-install
 
-1. Change project name and description in `README.md` and `package.json`
-2. Change project name in `package-lock.json`
-3. `git init` repository
-4. `npm install` dependencies
+- Change project name and description in `README.md` and `package.json`
+- Change project name in `package-lock.json`
 
-_It's important to `git init` before `npm install` so husky can install the git
-hooks._
+### Licensing
+
+> You should specify a license for your package so that people know how they are
+> permitted to use it, and any restrictions you're placing on it.
+
+_If you are not planning to publish to npm consider setting `"private": true` in
+your `package.json` to prevent accidental publication._
+
+_Learn more:
+[Configuring npm - license](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#license)_
 
 ## What's included
 
@@ -108,7 +120,7 @@ _Learn more:
 VSCode is configured to recommend the previous extensions from the extensions
 view (via `.vscode/extensions.json`).
 
-## NPM scripts
+## npm scripts
 
 ```json
 {
