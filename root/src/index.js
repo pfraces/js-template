@@ -1,1 +1,3 @@
-export const noop = () => {};
+import { helloWorld } from '#lib/lib.js';
+
+helloWorld();
