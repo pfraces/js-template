@@ -57,8 +57,10 @@ git hooks._
 ```text
 ./
   src/
+    lib/
+      lib.js
     index.js
-    index.test.js
+    index.spec.js
 ```
 
 ### `./`
