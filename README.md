@@ -94,10 +94,37 @@ VSCode is configured to include file extensions from import path suggestions
 ### Absolute paths
 
 The project is configured to support absolute paths from both Node.js (via
-`imports` in `package.json`) and VSCode (via `jsconfig.json`).
+`package.json`) and VSCode (via `jsconfig.json`).
 
-To use absolute paths, prefix your import files with `#src/`. VSCode will give
-you the right file suggestions.
+In Node.js, path aliases must start with `#`.
+
+Since it is not possible to alias the `src/` folder as `#/`, as a workaround we
+recommend to create an alias for each `src/` subfolder.
+
+Set your path aliases in `package.json` for Node.js:
+
+```json
+{
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  }
+}
+```
+
+Set your path aliases in `jsconfig.json` for VSCode:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "#lib/*": ["./src/lib/*"]
+    }
+  }
+}
+```
+
+To use absolute paths, prefix your import files with the alias for a `src/`
+subfolder, such as `#lib/`. VSCode will give you the right file suggestions.
 
 _Learn more:_
 
