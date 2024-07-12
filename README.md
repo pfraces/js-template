@@ -1,4 +1,4 @@
-# Node.js Template
+# Node Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: Prettier](https://img.shields.io/badge/Code_style-Prettier-ff69b4.svg)](https://prettier.io/)
@@ -8,11 +8,11 @@ authors.
 
 ## Usage
 
-Create a new `nodejs-template`-based project using
+Create a new `node-template`-based project using
 [degit](https://github.com/Rich-Harris/degit).
 
 ```sh
-npx degit pfraces/nodejs-template/root project-name
+npx degit pfraces/node-template/root project-name
 cd project-name
 git init
 npm install
