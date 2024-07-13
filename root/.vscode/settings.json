@@ -6,5 +6,5 @@
     "source.fixAll.markdownlint": "explicit"
   },
   "javascript.preferences.importModuleSpecifierEnding": "js",
-  "eslint.experimental.useFlatConfig": true
+  "eslint.useFlatConfig": true
 }
