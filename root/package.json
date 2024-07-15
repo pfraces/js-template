@@ -16,17 +16,20 @@
     "lint:md": "markdownlint-cli2 **/*.md !node_modules",
     "lint:js": "eslint .",
     "lint-staged": "lint-staged",
+    "deps:check": "ncu",
+    "deps:update": "ncu --upgrade && npm install",
     "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^9.7.0",
-    "chai": "^5.0.0",
+    "chai": "^5.1.1",
     "eslint": "^9.7.0",
     "globals": "^15.8.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "markdownlint-cli2": "^0.13.0",
-    "mocha": "^10.2.0",
+    "mocha": "^10.6.0",
+    "npm-check-updates": "^16.14.20",
     "prettier": "^3.3.3"
   }
 }
